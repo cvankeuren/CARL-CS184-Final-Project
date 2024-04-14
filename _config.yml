@@ -1,2 +1,3 @@
 title: CS184 Final Project
 theme: jekyll-theme-minimal
+description: This is our implementation of 3D texture sythesis based on a 2D exemplar to yield a photorealistic 3D texture mapping. 
