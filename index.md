@@ -2,7 +2,7 @@
 
 By: Rohan Mathur, Joy Liu, Anthony Salinas Suarez, Catherine Van Keuren
 
-[Milestone](./milesone.md)
+[Milestone](./milestone.md)
 
 [Final Report](./final-report.md)
 
