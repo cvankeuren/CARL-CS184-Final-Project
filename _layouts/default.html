@@ -11,13 +11,19 @@
   <![endif]-->
   {% include head-custom.html %}
 
+  <!-- Showdown library for Markdown conversion -->
+  <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+
   <!-- JavaScript Function -->
   <script>
     function loadPage(url) {
       fetch(url)
         .then(response => response.text())
-        .then(data => {
-          document.getElementById("main-content").innerHTML = data;
+        .then(text => {
+          // Convert Markdown to HTML
+          var converter = new showdown.Converter();
+          var html = converter.makeHtml(text);
+          document.getElementById("main-content").innerHTML = html;
         });
     }
   </script>
