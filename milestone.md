@@ -17,7 +17,7 @@ According to our original plan, we are actually right on schedule. By this week,
 
 ## Updated Work Plan
 Week 3: 4/14 - 4/20
-- Finish solid optimization and experiment with novel optimization methods!
+- Finish solid optimization, specifically debugging our optimization phase
 - Start histogram matching
 
 Week 4: 4/21 - 4/27
