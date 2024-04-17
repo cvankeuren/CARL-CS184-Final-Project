@@ -33,4 +33,4 @@ Week 5: 4/28 - 4/30
 
 [Milestone Slides](https://docs.google.com/presentation/d/1-W9nknMRB0o4Y1pjfMG802zc2aoa4MWge1_fWNJRdns/edit#slide=id.p)
 
-[Milestone Video] ()
+[Milestone Video] (https://www.youtube.com/watch?v=HBS5tmbgtsw)
