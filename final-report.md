@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
 # C.A.R.L. 3D Texture Synthesis from 2D Exemplars ort Final Report
 By: C.A.R.L. (Catherine Van Keuren, Anthony Salinas Suarez, Rohan Mathur, Longchao (Joy) Liu)
 
@@ -141,3 +150,5 @@ Catherine
 - Helped testing various paramater combinations to identify ideal fields
 
 
+</body>
+</html>
