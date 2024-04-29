@@ -4,7 +4,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
+</html>
 
 
 # C.A.R.L. 3D Texture Synthesis from 2D Exemplars ort Final Report
@@ -148,7 +148,3 @@ Catherine
 - Wrote the milestone writeup and final report write up (minus the Search Phase and Results sections)
 - Created the milestone presentation
 - Helped testing various paramater combinations to identify ideal fields
-
-
-</body>
-</html>
