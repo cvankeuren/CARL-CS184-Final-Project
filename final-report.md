@@ -129,7 +129,11 @@ In the original paper, they also utilized a clustering approach using the Mean-S
 
 Adding Histogram Matching allows us take global statistics into account to make sure that we are not converging to the wrong local exemplar patch in the previous step. In order to implement Histogram Matching, we add a step during the Optimization Phase that updates our previously calculated weight. This is done by first creating three 16 bin histograms (one for each R, G, and B channel) based on the original texture image using `torch.histc(...)`. For each solid patch, we also create the same histogram. Then, we update the weight using the given formula:
 
-$\omega'_{u,i,v} = \frac{\omega_{u,i,v}}{\left(1 + \sum_{j=1}^{k}\max\left[0, H_{s,j}(b_{j}(e_{u,i,v})) - H_{e,j}(b_{j}(e_{u,i,v}))\right]\right)}$
+<p align="left">
+  <img src="assets/i_cant_fix_the_latex.png" width = "35%" />
+</p>
+
+
 
 Here, Hs,j and He,j denote the j-th histogram of the solid and the exemplar, respectively, let H(b) denotes the value of bin b in a histogram H. Next, for a color c, let bj(c) specify the bin containing c in the histograms Hs,j and He,j. This allows us to adjust our weights with respect to the global and local color distribtuions.
 
