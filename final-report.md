@@ -140,10 +140,6 @@ Here, Hs,j and He,j denote the j-th histogram of the solid and the exemplar, res
 
 To visualize our results, we implemented a viewer using [viser](https://viser.studio/) to see the 3D output voxel grid (in full or at cross sections). We also output renders of the exterior of the final output at different angles to construct a full resolution video of our 3D results.
 
-<p align="center">
-  <video src="assets/viser_vis.mp4" />
-</p>
-
 [![Viser Visualization](http://img.youtube.com/vi/OvYKZRr2E54/0.jpg)](http://www.youtube.com/watch?v=OvYKZRr2E54 "Video Title")
 
 
