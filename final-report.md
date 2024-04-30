@@ -44,7 +44,38 @@ During the search phase, our main goal is to search for the best matching exempl
 
 For each patch in the solid, we found the most similar patch in the exemplar texture. To match the solid patches to exemplar patches, we used the [AnnLite](https://github.com/jina-ai/annlite) library with the similarity metric of cosine similarity for fast approximate nearest neighbors. Following the paper, we used Principle Component Analysis (PCA) to reduce the dimensionality of the patches to further speed up the Nearest Neighbors. We procomputed the PCA vectors and coordinates of the exemplar texture at the beginning of the Optimization phase, then we projected the solid patches into the PCA coordinates at each iteration. We verified that the matches became more similar over the course of iteration: 
 
-TODO Add MSE over iterations @ANTHONY
+Zebra Texture (with 5 iterations):
+<p align = "center">
+  <img src="assets/zebra.png" width = "30%"/> 
+  <img src="assets/z-1-3.png" width = "40%"/>
+</p>
+<p align = "center">
+  <img src="assets/zebra-scale-0.25-num_iters-5.png" width = "33%"/> 
+  <img src="assets/zebra-scale-0.5-num_iters-5.png" width = "33%"/> 
+  <img src="assets/zebra-scale-1.0-num_iters-5.png" width = "33%"/> 
+</p>
+
+Jagnow Texture (with 5 iterations):
+<p align = "center">
+  <img src="assets/jagnow.png" width = "30%"/> 
+  <img src="assets/j-1-1.png" width = "40%"/>
+</p>
+<p align = "center">
+  <img src="assets/jagnow-scale-0.25-num_iters-5.png" width = "33%"/> 
+  <img src="assets/jagnow-scale-0.5-num_iters-5.png" width = "33%"/> 
+  <img src="assets/jagnow-scale-1.0-num_iters-5.png" width = "33%"/> 
+</p>
+
+Woodwall Texture (with 5 iterations):
+<p align = "center">
+  <img src="assets/woodwall.png" width = "30%"/> 
+  <img src="assets/w-1-3.png" width = "40%"/>
+</p>
+<p align = "center">
+  <img src="assets/woodwall-scale-0.25-num_iters-5.png" width = "33%"/> 
+  <img src="assets/woodwall-scale-0.5-num_iters-5.png" width = "33%"/> 
+  <img src="assets/woodwall-scale-1.0-num_iters-5.png" width = "33%"/> 
+</p>
 
 **Pyramid Search**
 
@@ -142,6 +173,11 @@ Joy
 Rohan
 
 Anthony
+- Assisted in search phase implementation
+- Assisted in pyramid downsampling implementation
+- Assisted in validation testing to fine tune parameters for different textures
+- Orchestrated experiments to generate mean squared error loss plots for different texture/hyperparameters
+
 
 Catherine
 - Assisted in implementation of the optimization phase and histogram matching code
