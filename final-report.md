@@ -184,21 +184,21 @@ TODO: MORE RESULTS!
 Results of our full implementation on a 2D slice initialized to random texel values. 
 
 **Zebra Texture**
-<p align = "center">
-  <img src="assets/textures/zebra.png" width = "30%"/> 
-  <img src="assets/outputs/zebra.gif"/>
+<p align = "left">
+  <img src="assets/textures/zebra.png" width = "25%"/> 
+  <img src="assets/outputs/zebra.gif" width = "25%"/>
 </p>
 
 **Dune Texture**
-<p align = "center">
-  <img src="assets/textures/dune.png" width = "30%"/> 
-  <img src="assets/outputs/dune.gif"/>
+<p align = "left">
+  <img src="assets/textures/dune.png" width = "25%"/> 
+  <img src="assets/outputs/dune.gif" width = "25%"/>
 </p>
 
 **Caustic Texture**
-<p align = "center">
-  <img src="assets/textures/caustic.png" width = "30%"/> 
-  <img src="assets/outputs/caustic.gif"/>
+<p align = "left">
+  <img src="assets/textures/caustic.png" width = "25%"/> 
+  <img src="assets/outputs/caustic.gif" width = "25%"/>
 </p>
 
 ## References
