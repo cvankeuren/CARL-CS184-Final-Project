@@ -138,7 +138,14 @@ Here, Hs,j and He,j denote the j-th histogram of the solid and the exemplar, res
 
 ### Visualization
 
-TODO @ROHAN
+To visualize our results, we implemented a viewer using [viser](https://viser.studio/) to see the 3D output voxel grid (in full or at cross sections). We also output renders of the exterior of the final output at different angles to construct a full resolution video of our 3D results.
+
+<p align="center">
+  <video src="assets/viser_vis.mp4" />
+</p>
+
+[![Viser Visualization](http://img.youtube.com/vi/OvYKZRr2E54/0.jpg)](http://www.youtube.com/watch?v=OvYKZRr2E54 "Video Title")
+
 
 ### Problems We Encountered
 
@@ -176,13 +183,16 @@ Results of the Nearest Neighbors Search on a 2D patch of solid pixels.
 ## References
 Kopf, J., Fu, C.-W., Cohen-Or, D., Deussen, O., Lischinski, D., & Wong, T.-T. (2007). Solid texture synthesis from 2D exemplars. ACM Transactions on Graphics, 26(3), 2. https://doi.org/10.1145/1276377.1276380
 
-
-TODO: @ROHAN, add visualizer here
+Viser. https://viser.studio/
 
 ## Contributions
 Joy
 
 Rohan
+- Assisted in implementation of the optimization phase and histogram matching code
+- Developed 3D visualization system, tooling, and interfaces
+- Helped write and integrate pyramid downsampling
+- Helped batch the pipeline and developed GPU support
 
 Anthony
 - Assisted in search phase implementation
