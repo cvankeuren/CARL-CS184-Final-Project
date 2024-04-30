@@ -42,11 +42,13 @@ During the search phase, our main goal is to search for the best matching exempl
 
 **Nearest Neighbors**
 
-TODO @JOY/ANTHONY
+For each patch in the solid, we found the most similar patch in the exemplar texture. To match the solid patches to exemplar patches, we used the [AnnLite](https://github.com/jina-ai/annlite) library with the similarity metric of cosine similarity for fast approximate nearest neighbors. Following the paper, we used Principle Component Analysis (PCA) to reduce the dimensionality of the patches to further speed up the Nearest Neighbors. We procomputed the PCA vectors and coordinates of the exemplar texture at the beginning of the Optimization phase, then we projected the solid patches into the PCA coordinates at each iteration. We verified that the matches became more similar over the course of iteration: 
+
+TODO Add MSE over iterations @ANTHONY
 
 **Pyramid Search**
 
-TODO @JOY/ANTHONY
+To vary the context given to the pixel we're optimizing, we nested our optimization phase inside a pyramid search. This change in resolution helps the pixel see more of its surrounding, focusing first on low frequency regional and then on high-frequency details at the end. In our implementaton, we kept the neighborhood dimension constant. First, we downsampled the texture and the solid to the lowest resolution at the beginning of the outer loop, then for each iteration we interpolated the texture and the solid up the next resolution.
 
 ### Optimization Phase
 After we have found the exemplar patch that best matches the patch in our synthesized solid, we move onto the optimize phase, where we modify voxels one by one until our energy function that measures the differences between the two converges to a desired point. This is done by using iteratively re-weighted least squares to minimize the energy function, and then improved upon by adding in Histogram Matching. 
