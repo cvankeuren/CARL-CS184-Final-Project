@@ -50,9 +50,13 @@ Zebra Texture (with 5 iterations):
   <img src="assets/z-1-3.png" width = "40%"/>
 </p>
 <p align = "center">
-  <img src="assets/zebra-scale-0.25-num_iters-5.png" width = "33%"/> 
-  <img src="assets/zebra-scale-0.5-num_iters-5.png" width = "33%"/> 
-  <img src="assets/zebra-scale-1.0-num_iters-5.png" width = "33%"/> 
+  <img src="assets/zebra-scale-0.25-num_iters-5.png" width = "100%"/>
+</p>
+<p align = "center">
+  <img src="assets/zebra-scale-0.5-num_iters-5.png" width = "100%"/> 
+</p>
+<p align = "center">
+  <img src="assets/zebra-scale-1.0-num_iters-5.png" width = "100%"/> 
 </p>
 
 Jagnow Texture (with 5 iterations):
@@ -61,9 +65,13 @@ Jagnow Texture (with 5 iterations):
   <img src="assets/j-1-1.png" width = "40%"/>
 </p>
 <p align = "center">
-  <img src="assets/jagnow-scale-0.25-num_iters-5.png" width = "33%"/> 
-  <img src="assets/jagnow-scale-0.5-num_iters-5.png" width = "33%"/> 
-  <img src="assets/jagnow-scale-1.0-num_iters-5.png" width = "33%"/> 
+  <img src="assets/jagnow-scale-0.25-num_iters-5.png" width = "100%"/>
+</p>
+<p align = "center">
+  <img src="assets/jagnow-scale-0.5-num_iters-5.png" width = "100%"/>
+</p>
+<p align = "center">
+  <img src="assets/jagnow-scale-1.0-num_iters-5.png" width = "100%"/> 
 </p>
 
 Woodwall Texture (with 5 iterations):
@@ -72,9 +80,13 @@ Woodwall Texture (with 5 iterations):
   <img src="assets/w-1-3.png" width = "40%"/>
 </p>
 <p align = "center">
-  <img src="assets/woodwall-scale-0.25-num_iters-5.png" width = "33%"/> 
-  <img src="assets/woodwall-scale-0.5-num_iters-5.png" width = "33%"/> 
-  <img src="assets/woodwall-scale-1.0-num_iters-5.png" width = "33%"/> 
+  <img src="assets/woodwall-scale-0.25-num_iters-5.png" width = "100%"/>
+</p>
+<p align = "center">
+  <img src="assets/woodwall-scale-0.5-num_iters-5.png" width = "100%"/>
+</p>
+<p align = "center">
+  <img src="assets/woodwall-scale-1.0-num_iters-5.png" width = "100%"/> 
 </p>
 
 **Pyramid Search**
