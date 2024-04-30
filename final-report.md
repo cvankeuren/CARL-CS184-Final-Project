@@ -130,7 +130,7 @@ In the original paper, they also utilized a clustering approach using the Mean-S
 Adding Histogram Matching allows us take global statistics into account to make sure that we are not converging to the wrong local exemplar patch in the previous step. In order to implement Histogram Matching, we add a step during the Optimization Phase that updates our previously calculated weight. This is done by first creating three 16 bin histograms (one for each R, G, and B channel) based on the original texture image using `torch.histc(...)`. For each solid patch, we also create the same histogram. Then, we update the weight using the given formula:
 
 <p align="left">
-  <img src="assets/i_cant_fix_the_latex.png" width = "35%" />
+  <img src="assets/i_cant_fix_the_latex.png" width = "40%" />
 </p>
 
 
@@ -180,6 +180,27 @@ Results of the Nearest Neighbors Search on a 2D patch of solid pixels.
 
 TODO: MORE RESULTS!
 
+### 2D Texture Synthesis
+Results of our full implementation on a 2D slice initialized to random texel values. 
+
+**Zebra Texture**
+<p align = "center">
+  <img src="assets/textures/zebra.png" width = "30%"/> 
+  <img src="assets/outputs/zebra.gif"/>
+</p>
+
+**Dune Texture**
+<p align = "center">
+  <img src="assets/textures/dune.png" width = "30%"/> 
+  <img src="assets/outputs/dune.gif"/>
+</p>
+
+**Caustic Texture**
+<p align = "center">
+  <img src="assets/textures/caustic.png" width = "30%"/> 
+  <img src="assets/outputs/caustic.gif"/>
+</p>
+
 ## References
 Kopf, J., Fu, C.-W., Cohen-Or, D., Deussen, O., Lischinski, D., & Wong, T.-T. (2007). Solid texture synthesis from 2D exemplars. ACM Transactions on Graphics, 26(3), 2. https://doi.org/10.1145/1276377.1276380
 
@@ -204,6 +225,6 @@ Anthony
 Catherine
 - Assisted in implementation of the optimization phase and histogram matching code
 - Created and formatted the milestone and final report website
-- Wrote the milestone writeup and final report write up (minus the Search Phase and Results sections)
+- Wrote the milestone writeup and final report write up (minus the Search Phase section)
 - Created the milestone presentation
 - Helped testing various paramater combinations to identify ideal fields
