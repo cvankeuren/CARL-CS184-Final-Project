@@ -205,6 +205,7 @@ Results of our full implementation on a 2D slice initialized to random texel val
 <p align = "left">
   <img src="assets/textures/dune.png" width = "25%"/> 
   <img src="assets/outputs/dune.gif" width = "25%"/>
+  <img src="assets/outputs/dune_out.png" width = "25%"/>
 </p>
 
 **Caustic Texture**
