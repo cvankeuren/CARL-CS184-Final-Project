@@ -180,6 +180,10 @@ One of the biggest lessons learned for a few of the teammates was how to write c
 
 We also learned more about texture mapping and cool algorithms that can be used to optimally map textures to shapes with more than two dimmentions. It also gave us the opportunity to learn more about how varying different parameters (number of iterations, levels of resolution, etc) can affect tge output image and how we can finetune these values.
 
+### Further Work
+
+We believe that the speed of the GPU implementation could be made much better by being able to futher batch some operations. Right now, the nearest neighbors in the search phase is not using a pytorch library, so it cannot be parellalized on GPU. We also iterate through the batch to sample neighborhoods around a chosen pixel to optimize. These two parts of the pipeline are most likely what are bottlenecking our cuda run speeds.
+
 ## Results
 **Your final images, animations, video of your system (whichever is relevant). You can include results that you think show off what you built but that you did not have time to go over on presentation day.**
 
