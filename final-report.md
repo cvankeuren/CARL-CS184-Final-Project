@@ -213,12 +213,12 @@ Results of our full implementation on a variety of 3D solids.
 
 **Zebra Textured Cube**
 <p align = "left">
-  <img src="assets/outputs/zebra_cube_gif.gif" width = "60%"/>
+  <img src="assets/outputs/zebra_cube_gif.gif" width = "70%"/>
 </p>
 
 **Caustic Textured Cheburashka**
 <p align = "left">
-  <img src="assets/outputs/caust_cheb.gif" width = "60%"/>
+  <img src="assets/outputs/caust_cheb.gif" width = "70%"/>
 </p>
 
 
