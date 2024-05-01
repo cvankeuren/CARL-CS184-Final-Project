@@ -180,10 +180,6 @@ One of the biggest lessons learned for a few of the teammates was how to write c
 
 We also learned more about texture mapping and cool algorithms that can be used to optimally map textures to shapes with more than two dimmentions. It also gave us the opportunity to learn more about how varying different parameters (number of iterations, levels of resolution, etc) can affect tge output image and how we can finetune these values.
 
-### Further Work
-
-We believe that the speed of the GPU implementation could be made much better by being able to futher batch some operations. Right now, the nearest neighbors in the search phase is not using a pytorch library, so it cannot be parellalized on GPU. We also iterate through the batch to sample neighborhoods around a chosen pixel to optimize. These two parts of the pipeline are most likely what are bottlenecking our cuda run speeds.
-
 ## Results
 **Your final images, animations, video of your system (whichever is relevant). You can include results that you think show off what you built but that you did not have time to go over on presentation day.**
 
@@ -232,7 +228,15 @@ Results of our full implementation on a variety of 3D solids.
   <img src="assets/outputs/zebra_cow_gif.gif" width = "70%"/>
 </p>
 
+### Speed Benchmarks
+Using batching and increasing batch size gives us considerable speed-up in the synthesis. Doing computation on GPU vs CPU, however, did not have a very large effect. We speak to the reasoning and how this can be better in the further work section.
 
+![Speed Benchmarks](/assets/benchmarks.png)
+
+
+### Further Work
+
+We believe that the speed of the GPU implementation could be made much better by being able to futher batch some operations. Right now, the nearest neighbors in the search phase is not using a pytorch library, so it cannot be parellalized on GPU. We also iterate through the batch to sample neighborhoods around a chosen pixel to optimize. These two parts of the pipeline are most likely what are bottlenecking our cuda run speeds.
 
 ## References
 Kopf, J., Fu, C.-W., Cohen-Or, D., Deussen, O., Lischinski, D., & Wong, T.-T. (2007). Solid texture synthesis from 2D exemplars. ACM Transactions on Graphics, 26(3), 2. https://doi.org/10.1145/1276377.1276380
