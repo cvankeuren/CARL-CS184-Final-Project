@@ -184,7 +184,7 @@ Results of the Nearest Neighbors Search on a 2D patch of solid pixels.
 ![Search Phase](/assets/search_phase.jpg)
 
 ### 2D Texture Synthesis
-Results of our full implementation on a 2D slice initialized to random texel values. Visualized below are is the synthesized output every 50 batched updates, at three different pyramid search resolutions but interpolated to the same resolution.
+Results of our full implementation on a 2D slice initialized to random texel values. Visualized below are GIFS of the synthesized output changing over iterations. We sample every 50 batched updates, at three different pyramid search resolutions which are then interpolated to the same resolution.
 
 **Zebra Texture**
 <p align = "left">
@@ -208,7 +208,7 @@ Results of our full implementation on a 2D slice initialized to random texel val
 </p>
 
 ### 3D Texture Synthesis
-Results of our full implementation on a variety of 3D solids.
+Results of our full implementation on a variety of 3D solids. Below are 360 degree visualizations of several objects rendered using different textures. 
 
 **Zebra Texture Fandisk**
 <p align = "left">
