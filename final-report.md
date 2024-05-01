@@ -183,7 +183,7 @@ Results of the Nearest Neighbors Search on a 2D patch of solid pixels.
 TODO: MORE RESULTS!
 
 ### 2D Texture Synthesis
-Results of our full implementation on a 2D slice initialized to random texel values. 
+Results of our full implementation on a 2D slice initialized to random texel values. Visualized below are is the synthesized output every 50 batched updates, at three different pyramid search resolutions but interpolated to the same resolution.
 
 **Zebra Texture**
 <p align = "left">
