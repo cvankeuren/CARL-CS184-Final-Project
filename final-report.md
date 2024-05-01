@@ -13,9 +13,6 @@ By: C.A.R.L. (Catherine Van Keuren, Anthony Salinas Suarez, Rohan Mathur, Longch
 For this project, our overall goal was to implement a way to use 2D texture exemplars to synthesize 3D solid textures. We not only wanted to be able to map textures to the surface of solids, but we also took on the challenge to map the texture to the inside of the solid. The challenge with 3D texture mapping is that rather than just the surface texture aligning, we also need to make sure that each slice within the solid's texture aligns as well. We modeled our implementation off that of Johannes Kopf, et al. utilizing the methods described in their paper titled "Solid texture synthesis from 2D exemplars." The process used in their paper entails iterating over every cross section slice of voxels within the solid, and performing texture mapping to those slices. This process was implemented using two main phases: the Search Phase and the Optimization Phase. The Search Phase involves finding the patch of texture that best matches the solid slice, and the Optimization Phase involves iterively modifying specific voxels within the solid slices until it more closely matches the exemplar patch. _Our primary contributions include 1) implementing this project from scratch using PyTorch to take advantage of its batching capabilities, yielding a much faster rendering, 2) creating novel viewing tools for 3D visualization, and 3) creating GIFs and loss plots to assess the utility of different phases of the generation process._
 
 ## Technical approach
-**A 1-2 page summary of your technical approach, techniques used, algorithms implemented, etc. (use references to papers or other resources for further detail).
-Highlight how your approach varied from the references used (did you implement a subset, or did you change or enhance anything), the unique decisions you made and why.**
-
 
 As mentioned in the abstract, the 3d texture synthesis was done in two main stages: the Search Phase and the Optimization Phase that we alternativelt iterate through. The goal of these two stages is to determine the ideal mapping of the texture onto each voxel in the solid, thus minimizing a chosen energy function. In particular, we want every neighborhood (8x8 patch of voxels) on any 2D slice through the 3D solid to be similar to some neighborhood in the texture. For simplicity, we only accounted for slices that laid along the three main directional axes (x, y, z). This process can be seen below in an image from the Kopf, et al. paper.
 
@@ -181,7 +178,6 @@ One of the biggest lessons learned for a few of the teammates was how to write c
 We also learned more about texture mapping and cool algorithms that can be used to optimally map textures to shapes with more than two dimmentions. It also gave us the opportunity to learn more about how varying different parameters (number of iterations, levels of resolution, etc) can affect tge output image and how we can finetune these values.
 
 ## Results
-**Your final images, animations, video of your system (whichever is relevant). You can include results that you think show off what you built but that you did not have time to go over on presentation day.**
 
 ### Search Phase
 Results of the Nearest Neighbors Search on a 2D patch of solid pixels.
