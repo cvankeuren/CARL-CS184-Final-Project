@@ -161,11 +161,18 @@ One of the first problems that we had was a buggy optimization phase implementat
 
 This was resolved once we implemented histogram matching, meaning that the calulcation of our weights or how we updated color values was somewhat off.
 
-Another problem we encountered was determining how we should be iterating through and updating each voxel. For most of the time we were working on the project, we had the idea of only updating one random neighborhood per iteration, and then iterating many times so that on average, we eventually get a completed solid. However, we realized later on that the paper actually scans and updates the entire solid for each iteration, thus needing fewer iterations. Once we made this change, we noticed better results, even if it caused our runtime to ultimately slow down.
+Another problem we encountered was determining how we should be iterating through and updating each voxel. For most of the time we were working on the project, we had the idea of only updating one random neighborhood per iteration, and then iterating many times so that on average, we eventually get a completed solid. However, we realized later on that the paper actually scans and updates the entire solid for each iteration, thus needing fewer iterations. Once we made this change, we noticed better results, even if it caused our runtime to ultimately slow down. As you can see below, the patch created by iterating over all of the pixels rather than sampling yields a bit of a cleaner image.
 
-TODO - maybe put in a comparison image
-
-TODO: other issues?
+<tr align="left">
+			<td>
+      <figcaption>Sampling</figcaption>
+			  <img src="assets/non-deterministic.png" align="middle" width = "50%"/> 
+			</td>
+			<td>
+      <figcaption>Iterating Over Entire Patch</figcaption>
+			  <img src="assets/deterministc.png" align="middle" width = "50%"/>
+			</td>
+  </tr>
 
 ### Lessons Learned
 
@@ -179,8 +186,6 @@ We also learned more about texture mapping and cool algorithms that can be used 
 ### Search Phase
 Results of the Nearest Neighbors Search on a 2D patch of solid pixels.
 ![Search Phase](/assets/search_phase.jpg)
-
-TODO: MORE RESULTS!
 
 ### 2D Texture Synthesis
 Results of our full implementation on a 2D slice initialized to random texel values. Visualized below are is the synthesized output every 50 batched updates, at three different pyramid search resolutions but interpolated to the same resolution.
@@ -202,6 +207,21 @@ Results of our full implementation on a 2D slice initialized to random texel val
   <img src="assets/textures/caustic.png" width = "25%"/> 
   <img src="assets/outputs/caustic.gif" width = "25%"/>
 </p>
+
+### 3D Texture Synthesis
+Results of our full implementation on a variety of 3D solids.
+
+**Zebra Textured Cube**
+<p align = "left">
+  <img src="assets/outputs/zebra_cube_gif.gif" width = "60%"/>
+</p>
+
+**Caustic Textured Cheburashka**
+<p align = "left">
+  <img src="assets/outputs/caust_cheb.gif" width = "60%"/>
+</p>
+
+
 
 ## References
 Kopf, J., Fu, C.-W., Cohen-Or, D., Deussen, O., Lischinski, D., & Wong, T.-T. (2007). Solid texture synthesis from 2D exemplars. ACM Transactions on Graphics, 26(3), 2. https://doi.org/10.1145/1276377.1276380
@@ -232,5 +252,4 @@ Catherine
 - Assisted in implementation of the optimization phase and histogram matching code
 - Created and formatted the milestone and final report website
 - Wrote the milestone writeup and final report write up (minus the Search Phase section)
-- Created the milestone presentation
 - Helped testing various paramater combinations to identify ideal fields
