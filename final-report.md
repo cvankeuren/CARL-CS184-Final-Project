@@ -210,6 +210,10 @@ Viser. https://viser.studio/
 
 ## Contributions
 Joy
+- Assisted in search phase implementation
+- Assisted in pyramid downsampling implementation
+- Batched PyTorch pipeline
+- Created GIF visualizations 
 
 Rohan
 - Assisted in implementation of the optimization phase and histogram matching code
