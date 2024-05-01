@@ -6,7 +6,7 @@
 </html>
 
 
-# C.A.R.L. 3D Texture Synthesis from 2D Exemplars ort Final Report
+# C.A.R.L. 3D Texture Synthesis from 2D Exemplars Final Report
 By: C.A.R.L. (Catherine Van Keuren, Anthony Salinas Suarez, Rohan Mathur, Longchao (Joy) Liu)
 
 ## Abstract
@@ -175,7 +175,7 @@ Another problem we encountered was determining how we should be iterating throug
 
 One of the biggest lessons learned for a few of the teammates was how to write code in PyTorch and make use of its batching capabilities via tensors. It definitely had a pretty significant learning curve for the members who had little to no prior experience with the language, but it significantly helped the speed of our implementation.
 
-We also learned more about texture mapping and cool algorithms that can be used to optimally map textures to shapes with more than two dimmentions. It also gave us the opportunity to learn more about how varying different parameters (number of iterations, levels of resolution, etc) can affect tge output image and how we can finetune these values.
+We also learned more about texture mapping and cool algorithms that can be used to optimally map textures to shapes with more than two dimmentions. It also gave us the opportunity to learn more about how varying different parameters (number of iterations, levels of resolution, etc) can affect the output image and how we can finetune these values.
 
 ## Results
 
@@ -210,6 +210,11 @@ Results of our full implementation on a 2D slice initialized to random texel val
 ### 3D Texture Synthesis
 Results of our full implementation on a variety of 3D solids.
 
+**Zebra Texture Fandisk**
+<p align = "left">
+  <img src="assets/outputs/zebra_fandisk_gif_360.gif" width = "70%"/>
+</p>
+
 **Zebra Textured Cube**
 <p align = "left">
   <img src="assets/outputs/zebra_cube_gif.gif" width = "70%"/>
@@ -224,6 +229,7 @@ Results of our full implementation on a variety of 3D solids.
 <p align = "left">
   <img src="assets/outputs/zebra_cow_gif.gif" width = "70%"/>
 </p>
+
 
 ### Speed Benchmarks
 Using batching and increasing batch size gives us considerable speed-up in the synthesis. Doing computation on GPU vs CPU, however, did not have a very large effect. We speak to the reasoning and how this can be better in the further work section.
