@@ -198,6 +198,7 @@ Results of our full implementation on a 2D slice initialized to random texel val
 <p align = "left">
   <img src="assets/textures/zebra.png" width = "25%"/> 
   <img src="assets/outputs/zebra.gif" width = "25%"/>
+  <img src="assets/outputs/zebra_out.png" width = "25%"/> 
 </p>
 
 **Dune Texture**
@@ -210,6 +211,7 @@ Results of our full implementation on a 2D slice initialized to random texel val
 <p align = "left">
   <img src="assets/textures/caustic.png" width = "25%"/> 
   <img src="assets/outputs/caustic.gif" width = "25%"/>
+  <img src="assets/outputs/caustic_output.png" width = "25%"/> 
 </p>
 
 ### 3D Texture Synthesis
@@ -223,6 +225,11 @@ Results of our full implementation on a variety of 3D solids.
 **Caustic Textured Cheburashka**
 <p align = "left">
   <img src="assets/outputs/caust_cheb.gif" width = "70%"/>
+</p>
+
+**Zebra Textured Cow**
+<p align = "left">
+  <img src="assets/outputs/zebra_cow_gif.gif" width = "70%"/>
 </p>
 
 
