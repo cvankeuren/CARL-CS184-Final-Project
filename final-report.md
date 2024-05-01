@@ -14,7 +14,7 @@ For this project, our overall goal was to implement a way to use 2D texture exem
 
 ## Technical approach
 
-As mentioned in the abstract, the 3d texture synthesis was done in two main stages: the Search Phase and the Optimization Phase that we alternativelt iterate through. The goal of these two stages is to determine the ideal mapping of the texture onto each voxel in the solid, thus minimizing a chosen energy function. In particular, we want every neighborhood (8x8 patch of voxels) on any 2D slice through the 3D solid to be similar to some neighborhood in the texture. For simplicity, we only accounted for slices that laid along the three main directional axes (x, y, z). This process can be seen below in an image from the Kopf, et al. paper.
+As mentioned in the abstract, the 3D texture synthesis was done in two main stages: the Search Phase and the Optimization Phase that we alternatively iterate through. The goal of these two stages is to determine the ideal mapping of the texture onto each voxel in the solid, thus minimizing a chosen energy function. In particular, we want every neighborhood (8x8 patch of voxels) on any 2D slice through the 3D solid to be similar to some neighborhood in the texture. For simplicity, we only accounted for slices that laid along the three main directional axes (x, y, z). This process can be seen below in an image from the Kopf, et al. paper.
 
 ![Neighborhood Matching](/assets/neighborhoods.png)
 
@@ -24,7 +24,7 @@ $
 E(s, \{e\}) = \sum_{v} \sum_{i \in \{x, y, z\}} \| s_{v,i} - e_{v,i} \|^{r}
 $
 
-where $e$ is the input exemplar and $s$ is the synthesized solid. Additionally, $s_{v}$ represents a single voxel and $s_{v, x}, s_{v, y},$ and $s_{v, z}$ are the neighborhoods of $v$ in the slides orthogonal to the x, y and z axises. Lastly, $r$ is set to a value of 0.8 to be more robust against outliers.
+where $e$ is the input exemplar and $s$ is the synthesized solid. Additionally, $s_{v}$ represents a single voxel and $s_{v, x}, s_{v, y},$ and $s_{v, z}$ are the neighborhoods of $v$ in the slices orthogonal to the x, y and z axises. Lastly, $r$ is set to a value of 0.8 to be more robust against outliers.
 
 In addition, we carried out this process in a multiresolution fashion, starting with a coarser version of the volume and switching to a finer level and so on. More information about this process can be found in the Pyramid Search section.
 
@@ -129,7 +129,7 @@ In the original paper, they also utilized a clustering approach using the Mean-S
 Adding Histogram Matching allows us take global statistics into account to make sure that we are not converging to the wrong local exemplar patch in the previous step. In order to implement Histogram Matching, we add a step during the Optimization Phase that updates our previously calculated weight. This is done by first creating three 16 bin histograms (one for each R, G, and B channel) based on the original texture image using `torch.histc(...)`. For each solid patch, we also create the same histogram. Then, we update the weight using the given formula:
 
 <p align="left">
-  <img src="assets/i_cant_fix_the_latex.png" width = "40%" />
+  <img src="assets/i_cant_fix_the_latex.png" width = "45%" />
 </p>
 
 
