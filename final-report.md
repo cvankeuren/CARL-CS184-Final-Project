@@ -59,6 +59,7 @@ Zebra Texture (with 5 iterations):
   <img src="assets/zebra-scale-1.0-num_iters-5.png" width = "100%"/> 
 </p>
 
+<!---
 Jagnow Texture (with 5 iterations):
 <p align = "center">
   <img src="assets/jagnow.png" width = "30%"/> 
@@ -88,6 +89,7 @@ Woodwall Texture (with 5 iterations):
 <p align = "center">
   <img src="assets/woodwall-scale-1.0-num_iters-5.png" width = "100%"/> 
 </p>
+-->
 
 **Pyramid Search**
 
